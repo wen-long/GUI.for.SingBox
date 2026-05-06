@@ -149,7 +149,7 @@ jobs:
             cd ../..
           }
 
-          build_and_pack amd64
+          for arch in amd64 arm64; do build_and_pack $arch; done
 
       - uses: actions/upload-artifact@v6
         with:
